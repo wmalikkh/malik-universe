@@ -1,46 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#06090F" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <title>Malik Khelfah — Full Stack Developer &amp; Security Analyst</title>
+    <meta name="description" content="Full stack developer and cybersecurity analyst in Amman, Jordan. Python and FastAPI back ends, Flutter and React front ends, infrastructure built to be probed." />
+    <meta name="author" content="Malik Khelfah" />
+    <link rel="canonical" href="https://malikk.xyz/" />
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://malikk.xyz/" />
+    <meta property="og:title" content="Malik Khelfah — Full Stack Developer &amp; Security Analyst" />
+    <meta property="og:description" content="I build the thing, then I try to break it. Python, Flutter, React, and infrastructure I run myself." />
+    <meta property="og:image" content="https://malikk.xyz/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="malik_universe">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>malik_universe</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
-
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: #06090F; color: #fff; }
+      #root { min-height: 100vh; }
+      ::selection { background: rgba(255,60,190,.35); }
+      ::-webkit-scrollbar { width: 10px; }
+      ::-webkit-scrollbar-track { background: #06090F; }
+      ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.14); border-radius: 999px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(255,60,190,.5); }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
