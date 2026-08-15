@@ -1,97 +1,53 @@
-# malikk.xyz — portfolio
+# Malik Khelfah
 
-Single-page React site. No UI framework, no CSS library — one component, all styles inline in `src/Portfolio.jsx`.
+**Full stack developer · Amman, Jordan**
 
-## Run locally
+I build things. Python and FastAPI on the back end, Flutter for mobile, React on the web — and the whole path from an empty repo to something running on a server with a domain pointed at it.
 
-```bash
-npm install
-npm run dev        # http://localhost:5173
-```
+My degree is in Cybersecurity & Cloud Computing, which is less of a separate career than a lens on how I write code. Penetration testing teaches you to treat every input as hostile and assume your server will be found, so auth, validation, and error handling stop being things you bolt on at the end.
 
-## Build
+---
 
-```bash
-npm run build      # outputs to dist/
-npm run preview    # serve the build locally
-```
+### What I'm working with
 
-## Deploy (Hetzner + nginx)
+**Languages** — Python · JavaScript · Dart · SQL · Java · C++
 
-```bash
-npm run build
-rsync -avz --delete dist/ root@YOUR_SERVER:/var/www/malikk.xyz/
+**Back end** — FastAPI · Flask · Django · Node.js & Express · REST APIs
 
-# on the server, first time only:
-cp nginx.conf /etc/nginx/sites-available/malikk.xyz
-ln -s /etc/nginx/sites-available/malikk.xyz /etc/nginx/sites-enabled/
-certbot --nginx -d malikk.xyz -d www.malikk.xyz
-nginx -t && systemctl reload nginx
-```
+**Front end** — React · Flutter · HTML/CSS/JS
 
-## Before going live
+**Infrastructure** — Linux · Nginx · Docker · AWS (EC2, IAM, KMS) · Hetzner · Git
 
-- [ ] Drop your CV at `public/Malik-Khelfah-CV.pdf` (the hero button links to `/Malik-Khelfah-CV.pdf`)
-- [ ] Add a 1200x630 social preview image at `public/og.png`
-- [ ] Replace the LinkedIn placeholder URL in `src/Portfolio.jsx` (search for `linkedin.com`)
-- [ ] Rewrite the StegLens and MacroFlow descriptions — those are placeholders
-- [ ] Contact form currently opens the visitor's mail client via `mailto:`. For a real inbox-delivered form, swap `send()` for a POST to Formspree / Web3Forms / your own FastAPI endpoint.
+**Security** — SOC monitoring · Penetration testing · Wireshark · Nmap · Kali Linux · GRC
 
-## Structure
+---
 
-```
-index.html            meta tags, fonts, scrollbar + base styles
-src/main.jsx          React entry
-src/Portfolio.jsx     the entire site — CSS string, SVG icons, content data, sections
-public/               favicon, robots.txt, sitemap.xml (+ your CV and og.png)
-nginx.conf            production server block
-```
+### Things I've built
 
-## Editing content
+**[Dar Alfeneq](https://alfeneq.com/)** — Flutter client over a Python API, live and in use by a publishing house in Amman. Built and deployed end to end.
 
-Everything is in the data blocks near the middle of `src/Portfolio.jsx`:
+**[StegLens](https://github.com/steglens/Steg-Lens)** — Steganography analysis tool. Started as a question about what hides inside an image file and turned into something that actually answers it.
 
-| Constant   | What it controls                                   |
-|------------|----------------------------------------------------|
-| `TICKER`   | scrolling tech strip under the hero                |
-| `SKILLS`   | icon-badge groups (key must match a name in `ICONS`)|
-| `JOBS`     | experience timeline                                |
-| `FEATURED` | Dar Alfeneq, the big card                          |
-| `PROJECTS` | the smaller project cards                          |
-| `CERTS`    | certificate pills                                  |
+**[MacroFlow](https://macroflow.info/)** — Desktop automation utility that collapses repetitive work into a single trigger. [Source](https://github.com/wmalikkh/MacroFlow)
 
-To add a skill icon: add an SVG to `ICONS`, then reference its key in `SKILLS`.
+---
 
-## Deploy on GitHub Pages
+### Currently
 
-`.github/workflows/deploy.yml` builds and publishes on every push to `main`.
+Technical Support Specialist at **Estarta**. Before that: IT infrastructure training at Kaizen 365, a cybersecurity internship at IT Security C&T doing SOC monitoring and vulnerability assessment, and a couple of years fixing hardware and handling support queues — which is where I learned that most problems are boring and the boring ones still have to get solved.
 
-1. Create the repo and push:
-   ```bash
-   git init && git add . && git commit -m "portfolio"
-   git branch -M main
-   git remote add origin https://github.com/wmalikkh/portfolio.git
-   git push -u origin main
-   ```
-2. Repo **Settings → Pages → Source: GitHub Actions**.
-3. Wait for the Actions run to go green. Site is live.
+B.Sc. in Cybersecurity & Cloud Computing, Applied Science Private University.
 
-### Base path matters
+---
 
-| Repo name | URL | `base` in vite.config.js |
-|---|---|---|
-| `wmalikkh.github.io` | wmalikkh.github.io | `/` (default) |
-| `portfolio` | wmalikkh.github.io/portfolio | `/portfolio/` |
-| any, + custom domain | malikk.xyz | `/` (default) |
+### Certifications
 
-Wrong base = blank page with 404s on the JS file. That's the one thing that trips people up.
+[**IBM Full Stack Software Developer**](https://coursera.org/verify/professional-cert/MKA646XTG458) — 15 courses, IBM via Coursera
 
-### Custom domain (malikk.xyz on Pages)
+[**Google IT Support**](https://coursera.org/verify/professional-cert/1F1QCI0S8BT1) — Google via Coursera
 
-1. Add `public/CNAME` containing one line: `malikk.xyz`
-2. At your DNS provider:
-   - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `CNAME` for `www` → `wmalikkh.github.io`
-3. Settings → Pages → Custom domain → `malikk.xyz` → tick **Enforce HTTPS**
+---
 
-Note this replaces your Hetzner setup for this domain — point DNS at one or the other, not both.
+### Reach me
+
+[malikk.xyz](https://malikk.xyz) · [LinkedIn](https://www.linkedin.com/in/malik-khelfah) · Malik.khelfah.it@gmail.com
